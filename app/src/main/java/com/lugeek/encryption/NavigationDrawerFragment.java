@@ -56,7 +56,7 @@ public class NavigationDrawerFragment extends Fragment {
 
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
-    private boolean mUserLearnedDrawer;
+    private boolean mUserLearnedDrawer;  //用户识别drawer标识位，第一次打开显示drawer，用户开启过drawer之后标识位置位
 
     public NavigationDrawerFragment() {
     }
@@ -129,7 +129,9 @@ public class NavigationDrawerFragment extends Fragment {
         // set up the drawer's list view with items and click listener
 
         ActionBar actionBar = getActionBar();
+        //显示homebutton
         actionBar.setDisplayHomeAsUpEnabled(true);
+        //按homebutton可以打开navigationdrawer
         actionBar.setHomeButtonEnabled(true);
 
         // ActionBarDrawerToggle ties together the the proper interactions
@@ -145,6 +147,7 @@ public class NavigationDrawerFragment extends Fragment {
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 if (!isAdded()) {
+                    //if the NavigationDrawerFragment is not currently added to its activity
                     return;
                 }
 
@@ -155,6 +158,7 @@ public class NavigationDrawerFragment extends Fragment {
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 if (!isAdded()) {
+                    //if the NavigationDrawerFragment is not currently added to its activity
                     return;
                 }
 
