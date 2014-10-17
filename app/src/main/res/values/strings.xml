@@ -2,9 +2,19 @@
 <resources>
 
     <string name="app_name">Encryption</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Base64</string>
+    <string name="title_section2">MD5</string>
+    <string name="title_section3">SHA1</string>
+    <string name="title_section4">SHA224</string>
+    <string name="title_section5">SHA256</string>
+    <string name="title_section6">SHA384</string>
+    <string name="title_section7">SHA512</string>
+    <string name="title_section8">HmacMD5</string>
+    <string name="title_section9">HmacSHA1</string>
+    <string name="title_section10">HmacSHA224</string>
+    <string name="title_section11">HmacSHA256</string>
+    <string name="title_section12">HmacSHA384</string>
+    <string name="title_section13">HmacSHA512</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>

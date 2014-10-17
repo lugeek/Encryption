@@ -8,6 +8,7 @@ import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -47,13 +48,27 @@ public class MainActivity extends Activity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
+    /**
+     * 实现接口申明的方法。
+     * @param position :the position of item in drawer
+     */
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+
+        switch (position){
+            case 0:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, Base64Fragment.newInstance(position + 1))
+                        .commit();
+                break;
+            default:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                        .commit();
+                break;
+        }
     }
 
     public void onSectionAttached(int number) {
@@ -67,6 +82,37 @@ public class MainActivity extends Activity
             case 3:
                 mTitle = getString(R.string.title_section3);
                 break;
+            case 4:
+                mTitle = getString(R.string.title_section4);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_section5);
+                break;
+            case 6:
+                mTitle = getString(R.string.title_section6);
+                break;
+            case 7:
+                mTitle = getString(R.string.title_section7);
+                break;
+            case 8:
+                mTitle = getString(R.string.title_section8);
+                break;
+            case 9:
+                mTitle = getString(R.string.title_section9);
+                break;
+            case 10:
+                mTitle = getString(R.string.title_section10);
+                break;
+            case 11:
+                mTitle = getString(R.string.title_section11);
+                break;
+            case 12:
+                mTitle = getString(R.string.title_section12);
+                break;
+            case 13:
+                mTitle = getString(R.string.title_section13);
+                break;
+
         }
     }
 
