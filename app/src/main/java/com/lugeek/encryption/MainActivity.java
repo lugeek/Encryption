@@ -63,6 +63,11 @@ public class MainActivity extends Activity
                         .replace(R.id.container, Base64Fragment.newInstance(position + 1))
                         .commit();
                 break;
+            case 1:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, MD5Fragment.newInstance(position + 1))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))

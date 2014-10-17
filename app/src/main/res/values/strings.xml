@@ -19,5 +19,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="hint_miwen">密文</string>
+    <string name="hint_mingwen">明文</string>
+    <string name="button_jiami">加密️️️</string>
+    <string name="button_jiemi">解密</string>
 
 </resources>
