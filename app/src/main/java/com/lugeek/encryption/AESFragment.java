@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.lugeek.algorithm.des;
+import com.lugeek.algorithm.aes;
 
-public class DESFragment extends Fragment{
+public class AESFragment extends Fragment{
     private static final String ARG_SECTION_NUMBER = "section_number";
     private EditText mingEdit;
     private EditText miyaoEdit;
@@ -24,7 +23,8 @@ public class DESFragment extends Fragment{
     private Button jiamiButton;
     private Button jiemiButton;
     private boolean flag = false;
-    public DESFragment() {
+
+    public AESFragment() {
     }
 
     @Override
@@ -57,19 +57,19 @@ public class DESFragment extends Fragment{
         public void onClick(View view) {
             if (view == initButton){
                 //初始化密钥
-                String desKey = "";
+                String aesKey = "";
                 try {
-                    desKey = des.initKey();
+                    aesKey = aes.initKey();
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-                miyaoEdit.setText(desKey);
+                miyaoEdit.setText(aesKey);
             }
             if (view == jiamiButton){
                 String desKey = "";
                 desKey = miyaoEdit.getText().toString();
                 if (desKey.equals("")){
-                    Toast.makeText(getActivity(),"请先初始化密钥",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "请先初始化密钥", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -83,8 +83,8 @@ public class DESFragment extends Fragment{
                 byte[] outputData = new byte[0];
                 String outputStr = "";
                 try {
-                    outputData = des.encrypt(inputData,desKey);
-                    outputStr = des.encryptBASE64(outputData);
+                    outputData = aes.encrypt(inputData,desKey);
+                    outputStr = aes.encryptBASE64(outputData);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -105,7 +105,7 @@ public class DESFragment extends Fragment{
                 }
                 byte[] outputData = new byte[0];
                 try {
-                    outputData = des.decrypt(des.decryptBASE64(outputStr),desKey);
+                    outputData = aes.decrypt(aes.decryptBASE64(outputStr),desKey);
                 }catch (Exception e){
                     e.printStackTrace();
                 }
@@ -120,11 +120,12 @@ public class DESFragment extends Fragment{
         }
     }
 
-    public static DESFragment newInstance(int sectionNumber){
-        DESFragment fragment = new DESFragment();
+    public static AESFragment newInstance(int sectionNumber){
+        AESFragment fragment = new AESFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER,sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
+
 }

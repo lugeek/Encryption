@@ -123,6 +123,7 @@ public class NavigationDrawerFragment extends Fragment {
                         getString(R.string.title_section12),
                         getString(R.string.title_section13),
                         "DES",
+                        "AES",
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;

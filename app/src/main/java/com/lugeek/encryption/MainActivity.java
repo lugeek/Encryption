@@ -118,6 +118,11 @@ public class MainActivity extends Activity
                         .replace(R.id.container,DESFragment.newInstance(position + 1))
                         .commit();
                 break;
+            case 12:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,AESFragment.newInstance(position + 1))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
@@ -163,6 +168,9 @@ public class MainActivity extends Activity
                 break;
             case 12:
                 mTitle = "DES";
+                break;
+            case 13:
+                mTitle = "AES";
                 break;
 
         }
