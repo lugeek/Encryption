@@ -48,7 +48,7 @@ public class SHAFragment extends Fragment{
         public void onClick(View view){
             if(view == encryptButton){
                 String inputStr = mingEdit.getText().toString();
-                if (inputStr == null){
+                if (inputStr.equals("")){
                     Toast.makeText(getActivity(), "待加密数据不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }

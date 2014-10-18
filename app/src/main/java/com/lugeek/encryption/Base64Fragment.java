@@ -61,7 +61,7 @@ public class Base64Fragment extends Fragment {
         public void onClick(View view){
             if (view == buttonJiami){
                 String mingwen = editMing.getText().toString();
-                if (mingwen == null){
+                if (mingwen.equals("")){
                     Toast.makeText(getActivity(),"待加密数据不能为空",Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -75,7 +75,7 @@ public class Base64Fragment extends Fragment {
                 editMi.setText(miwen);
             }else if(view == buttonJiemi){
                 String miwen = editMi.getText().toString();
-                if(miwen == null){
+                if(miwen.equals("")){
                     Toast.makeText(getActivity(),"待解密数据不能为空",Toast.LENGTH_SHORT).show();
                     return;
                 }

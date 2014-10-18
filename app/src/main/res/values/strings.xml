@@ -20,9 +20,11 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
     <string name="hint_miwen">密文</string>
-    <string name="hint_mingwen">明文</string>
+    <string name="hint_mingwen">待加密数据</string>
     <string name="button_jiami">加密️️️</string>
     <string name="button_jiemi">解密</string>
     <string name="hint_miyao">密钥</string>
+    <string name="hint_jiemi">解密结果</string>
+    <string name="button_initkey">初始化密钥</string>
 
 </resources>

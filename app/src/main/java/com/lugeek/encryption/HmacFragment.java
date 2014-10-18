@@ -51,12 +51,12 @@ public class HmacFragment extends Fragment{
         public void onClick(View view) {
             if (view == jiamiButton){
                 String inputStr = mingEdit.getText().toString();
-                if(inputStr == null){
+                if(inputStr.equals("")){
                     Toast.makeText(getActivity(),"待加密数据不能为空",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 String inputKey = miyaoEdit.getText().toString();
-                if(inputKey == null){
+                if(inputKey.equals("")){
                     Toast.makeText(getActivity(),"密钥不能为空",Toast.LENGTH_SHORT).show();
                     return;
                 }

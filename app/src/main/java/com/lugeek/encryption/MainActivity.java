@@ -113,6 +113,11 @@ public class MainActivity extends Activity
                         .replace(R.id.container,HmacFragment.newInstance(position + 1,"HmacSHA512"))
                         .commit();
                 break;
+            case 11:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,DESFragment.newInstance(position + 1))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
@@ -155,6 +160,9 @@ public class MainActivity extends Activity
                 break;
             case 11:
                 mTitle = getString(R.string.title_section13);
+                break;
+            case 12:
+                mTitle = "DES";
                 break;
 
         }

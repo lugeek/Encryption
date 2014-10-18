@@ -45,7 +45,7 @@ public class MD5Fragment extends Fragment {
         public void onClick(View view) {
             if (view == encryptButton){
                 String mingwen = mingEdit.getText().toString();
-                if (mingwen == null){
+                if (mingwen.equals("")){
                     Toast.makeText(getActivity(), "待加密数据不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
