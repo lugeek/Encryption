@@ -88,6 +88,31 @@ public class MainActivity extends Activity
                         .replace(R.id.container, SHAFragment.newInstance(position + 1,"SHA-512"))
                         .commit();
                 break;
+            case 6:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, HmacFragment.newInstance(position + 1,"HmacMD5"))
+                        .commit();
+                break;
+            case 7:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,HmacFragment.newInstance(position + 1,"HmacSHA1"))
+                        .commit();
+                break;
+            case 8:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,HmacFragment.newInstance(position + 1,"HmacSHA256"))
+                        .commit();
+                break;
+            case 9:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,HmacFragment.newInstance(position + 1,"HmacSHA384"))
+                        .commit();
+                break;
+            case 10:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,HmacFragment.newInstance(position + 1,"HmacSHA512"))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
@@ -123,15 +148,12 @@ public class MainActivity extends Activity
                 mTitle = getString(R.string.title_section9);
                 break;
             case 9:
-                mTitle = getString(R.string.title_section10);
-                break;
-            case 10:
                 mTitle = getString(R.string.title_section11);
                 break;
-            case 11:
+            case 10:
                 mTitle = getString(R.string.title_section12);
                 break;
-            case 12:
+            case 11:
                 mTitle = getString(R.string.title_section13);
                 break;
 

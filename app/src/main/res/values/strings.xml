@@ -23,5 +23,6 @@
     <string name="hint_mingwen">明文</string>
     <string name="button_jiami">加密️️️</string>
     <string name="button_jiemi">解密</string>
+    <string name="hint_miyao">密钥</string>
 
 </resources>
