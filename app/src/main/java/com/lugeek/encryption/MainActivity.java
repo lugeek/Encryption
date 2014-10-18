@@ -68,6 +68,26 @@ public class MainActivity extends Activity
                         .replace(R.id.container, MD5Fragment.newInstance(position + 1))
                         .commit();
                 break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, SHAFragment.newInstance(position + 1,"SHA-1"))
+                        .commit();
+                break;
+            case 3:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, SHAFragment.newInstance(position + 1,"SHA-256"))
+                        .commit();
+                break;
+            case 4:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, SHAFragment.newInstance(position + 1,"SHA-384"))
+                        .commit();
+                break;
+            case 5:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, SHAFragment.newInstance(position + 1,"SHA-512"))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
@@ -88,33 +108,30 @@ public class MainActivity extends Activity
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
-                mTitle = getString(R.string.title_section4);
-                break;
-            case 5:
                 mTitle = getString(R.string.title_section5);
                 break;
-            case 6:
+            case 5:
                 mTitle = getString(R.string.title_section6);
                 break;
-            case 7:
+            case 6:
                 mTitle = getString(R.string.title_section7);
                 break;
-            case 8:
+            case 7:
                 mTitle = getString(R.string.title_section8);
                 break;
-            case 9:
+            case 8:
                 mTitle = getString(R.string.title_section9);
                 break;
-            case 10:
+            case 9:
                 mTitle = getString(R.string.title_section10);
                 break;
-            case 11:
+            case 10:
                 mTitle = getString(R.string.title_section11);
                 break;
-            case 12:
+            case 11:
                 mTitle = getString(R.string.title_section12);
                 break;
-            case 13:
+            case 12:
                 mTitle = getString(R.string.title_section13);
                 break;
 
