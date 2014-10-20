@@ -6,6 +6,8 @@ import android.app.ActionBar;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -201,7 +203,7 @@ public class MainActivity extends FragmentActivity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
+            getMenuInflater().inflate(R.menu.global, menu);
             restoreActionBar();
             return true;
         }
@@ -217,6 +219,9 @@ public class MainActivity extends FragmentActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Uri uri = Uri.parse("http://lugeek.com");
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            startActivity(intent);
             return true;
         }
 
