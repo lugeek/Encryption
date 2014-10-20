@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/userdataEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="@string/hint_mingwen"/>
+    <EditText
+        android:id="@+id/encryptedEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:editable="false"
+        android:hint="@string/hint_rsa_publickeyencrypt"/>
+    <EditText
+        android:id="@+id/decryptedEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="@string/hint_rsa_privatekeydecrypt"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/encryptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rsa_publickeyencrypt"/>
+        <Button
+            android:id="@+id/decryptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_rsa_privatekeydecrypt"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -26,5 +26,17 @@
     <string name="hint_miyao">密钥</string>
     <string name="hint_jiemi">解密结果</string>
     <string name="button_initkey">初始化密钥</string>
+    <string name="button_initRSAkey">初始化公钥和私钥</string>
+    <string name="hint_publickey">公钥</string>
+    <string name="hint_privatekey">私钥</string>
+    <string name="hint_rsa_publickeyencrypt">公钥加密数据</string>
+    <string name="hint_rsa_privatekeydecrypt">私钥解密数据</string>
+    <string name="button_rsa_publickeyencrypt">公钥加密</string>
+    <string name="button_rsa_privatekeydecrypt">私钥解密</string>
+    <string name="hint_rsa_tobesigned">待签名数据</string>
+    <string name="hint_rsa_signed">私钥签名</string>
+    <string name="hint_rsa_publickeyprove">公钥验证签名结果</string>
+    <string name="button_rsa_sign">私钥签名</string>
+    <string name="button_rsa_prove">公钥验证</string>
 
 </resources>

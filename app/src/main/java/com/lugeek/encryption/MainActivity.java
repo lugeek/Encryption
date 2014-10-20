@@ -3,11 +3,14 @@ package com.lugeek.encryption;
 import android.app.Activity;
 
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.FragmentManager;
+
+
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -20,7 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity
+public class MainActivity extends FragmentActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -39,7 +42,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.navigation_drawer);
+                getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
         // Set up the drawer.
@@ -55,7 +58,7 @@ public class MainActivity extends Activity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         switch (position){
             case 0:
@@ -123,6 +126,11 @@ public class MainActivity extends Activity
                         .replace(R.id.container,AESFragment.newInstance(position + 1))
                         .commit();
                 break;
+            case 13:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container,RSAFragment.newInstance(position + 1))
+                        .commit();
+                break;
             default:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
@@ -171,6 +179,9 @@ public class MainActivity extends Activity
                 break;
             case 13:
                 mTitle = "AES";
+                break;
+            case 14:
+                mTitle = "RSA";
                 break;
 
         }

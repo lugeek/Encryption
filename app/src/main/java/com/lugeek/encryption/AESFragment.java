@@ -1,9 +1,10 @@
 package com.lugeek.encryption;
 
 import android.app.Activity;
-import android.app.Fragment;
+
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 
 import com.lugeek.algorithm.aes;
 
-public class AESFragment extends Fragment{
+public class AESFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
     private EditText mingEdit;
     private EditText miyaoEdit;
